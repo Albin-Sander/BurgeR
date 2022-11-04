@@ -10,7 +10,10 @@ import SwiftUI
 struct BurgerDetailView: View {
     let author: String
     var body: some View {
-        Text("Author \(author)")
+        VStack {
+            Text("Author \(author)")
+        }
+        
     }
 }
 

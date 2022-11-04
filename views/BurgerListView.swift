@@ -17,17 +17,29 @@ struct BurgerListView: View {
     }
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Hello World")
                 List {
                     ForEach(vm.items, id: \.recordId) { item in
                         NavigationLink(destination: BurgerDetailView(author: item.author)) {
-                            Text(item.name)
+                            HStack {
+                                Text(item.name)
+                                ForEach(1...Int(item.stars), id: \.self) {_ in
+                                    Image(systemName: "star.fill")
+                                        .foregroundColor(Color.yellow)
+                                        .font(.system(size: 15))
+                                }
+                                
+                            }
+                            
                         }
                     }
                 }
-            }
+                .refreshable {
+                    vm.populateItems()
+                }
             .padding()
+            .padding(.top, 5)
+            .navigationTitle("BurgeR")
+            
         }
     }
 }

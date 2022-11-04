@@ -71,4 +71,8 @@ struct ItemViewModel {
     var author: String {
         itemListing.author
     }
+    
+    var stars: Int64 {
+        itemListing.stars
+    }
 }
