@@ -6,16 +6,14 @@
 //
 
 import SwiftUI
+import CloudKit
 
 struct ContentView: View {
+    let container = CKContainer(identifier: "iCloud.com.sander.BurgeR")
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            BurgerListView(vm: ItemListViewModel(container: container))
         }
-        .padding()
     }
 }
 

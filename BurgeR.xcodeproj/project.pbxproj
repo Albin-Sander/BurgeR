@@ -11,6 +11,10 @@
 		B13DA5012911BF1100A24C0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DA5002911BF1100A24C0B /* ContentView.swift */; };
 		B13DA5032911BF1200A24C0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13DA5022911BF1200A24C0B /* Assets.xcassets */; };
 		B13DA5062911BF1200A24C0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13DA5052911BF1200A24C0B /* Preview Assets.xcassets */; };
+		B13DA5102911CA7D00A24C0B /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DA50F2911CA7D00A24C0B /* ItemListViewModel.swift */; };
+		B13DA5142911CB7F00A24C0B /* ItemListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DA5132911CB7F00A24C0B /* ItemListing.swift */; };
+		B143E7F729156A3E007D80BB /* BurgerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E7F629156A3E007D80BB /* BurgerDetailView.swift */; };
+		B143E7F929156AEB007D80BB /* BurgerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E7F829156AEB007D80BB /* BurgerListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		B13DA5002911BF1100A24C0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B13DA5022911BF1200A24C0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13DA5052911BF1200A24C0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B13DA50C2911BF2300A24C0B /* BurgeR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BurgeR.entitlements; sourceTree = "<group>"; };
+		B13DA50F2911CA7D00A24C0B /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		B13DA5132911CB7F00A24C0B /* ItemListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListing.swift; sourceTree = "<group>"; };
+		B143E7F629156A3E007D80BB /* BurgerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerDetailView.swift; sourceTree = "<group>"; };
+		B143E7F829156AEB007D80BB /* BurgerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 		B13DA4F22911BF1100A24C0B = {
 			isa = PBXGroup;
 			children = (
+				B143E7F529156A2D007D80BB /* views */,
 				B13DA4FD2911BF1100A24C0B /* BurgeR */,
 				B13DA4FC2911BF1100A24C0B /* Products */,
 			);
@@ -51,6 +61,9 @@
 		B13DA4FD2911BF1100A24C0B /* BurgeR */ = {
 			isa = PBXGroup;
 			children = (
+				B13DA5122911CB6F00A24C0B /* Models */,
+				B13DA5112911CA8200A24C0B /* viewModels */,
+				B13DA50C2911BF2300A24C0B /* BurgeR.entitlements */,
 				B13DA4FE2911BF1100A24C0B /* BurgeRApp.swift */,
 				B13DA5002911BF1100A24C0B /* ContentView.swift */,
 				B13DA5022911BF1200A24C0B /* Assets.xcassets */,
@@ -65,6 +78,31 @@
 				B13DA5052911BF1200A24C0B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B13DA5112911CA8200A24C0B /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B13DA50F2911CA7D00A24C0B /* ItemListViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		B13DA5122911CB6F00A24C0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B13DA5132911CB7F00A24C0B /* ItemListing.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B143E7F529156A2D007D80BB /* views */ = {
+			isa = PBXGroup;
+			children = (
+				B143E7F629156A3E007D80BB /* BurgerDetailView.swift */,
+				B143E7F829156AEB007D80BB /* BurgerListView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +176,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B13DA5012911BF1100A24C0B /* ContentView.swift in Sources */,
+				B13DA5142911CB7F00A24C0B /* ItemListing.swift in Sources */,
+				B143E7F729156A3E007D80BB /* BurgerDetailView.swift in Sources */,
+				B143E7F929156AEB007D80BB /* BurgerListView.swift in Sources */,
+				B13DA5102911CA7D00A24C0B /* ItemListViewModel.swift in Sources */,
 				B13DA4FF2911BF1100A24C0B /* BurgeRApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BurgeR/BurgeR.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BurgeR/Preview Content\"";
@@ -293,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BurgeR/BurgeR.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BurgeR/Preview Content\"";
