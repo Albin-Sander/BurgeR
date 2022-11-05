@@ -19,7 +19,7 @@ struct BurgerListView: View {
         NavigationView {
                 List {
                     ForEach(vm.items, id: \.recordId) { item in
-                        NavigationLink(destination: BurgerDetailView(author: item.author)) {
+                        NavigationLink(destination: BurgerDetailView(author: item.author, image: item.image)) {
                             HStack {
                                 Text(item.name)
                                 ForEach(1...Int(item.stars), id: \.self) {_ in
@@ -36,6 +36,7 @@ struct BurgerListView: View {
                 .refreshable {
                     vm.populateItems()
                 }
+                .environment(\.defaultMinListRowHeight, 50)
             .padding()
             .padding(.top, 5)
             .navigationTitle("BurgeR")

@@ -7,6 +7,7 @@
 
 import Foundation
 import CloudKit
+import SwiftUI
 
 enum RecordType: String {
     case establishment = "Establishment"
@@ -74,5 +75,9 @@ struct ItemViewModel {
     
     var stars: Int64 {
         itemListing.stars
+    }
+    
+    var image: UIImage {
+        itemListing.image
     }
 }
