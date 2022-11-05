@@ -19,7 +19,7 @@ struct BurgerListView: View {
         NavigationView {
                 List {
                     ForEach(vm.items, id: \.recordId) { item in
-                        NavigationLink(destination: BurgerDetailView(author: item.author, image: item.image)) {
+                        NavigationLink(destination: BurgerDetailView(name: item.name, author: item.author, image: item.image)) {
                             HStack {
                                 Text(item.name)
                                 ForEach(1...Int(item.stars), id: \.self) {_ in

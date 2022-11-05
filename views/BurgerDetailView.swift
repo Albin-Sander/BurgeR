@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct BurgerDetailView: View {
+    let name: String
     let author: String
     let image: UIImage?
     var body: some View {
         VStack {
+            Text("\(name)")
+                .font(.headline)
             Image(uiImage: image!)
                 .resizable()
+                .frame(width: 300, height: 300)
+                .cornerRadius(15)
                 .scaledToFit()
-            Text("Author \(author)")
+                .padding()
+             
+            Text("Written by: \(author)")
         }
         
     }
@@ -23,6 +30,6 @@ struct BurgerDetailView: View {
 
 struct BurgerDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BurgerDetailView(author: "Albin", image: nil)
+        BurgerDetailView(name: "Mcdonalds", author: "Albin", image: nil)
     }
 }
