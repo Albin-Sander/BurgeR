@@ -26,6 +26,30 @@ class ItemListViewModel: ObservableObject {
         self.database = self.container.publicCloudDatabase
     }
     
+    
+    func saveItem(name: String, stars: Int64, description: String, author: String) {
+        
+        let record = CKRecord(recordType: RecordType.establishment.rawValue)
+        let imageName = UIImage(named: "mcdonalds")!
+        let itemListing = ItemListing(name: name, author: author, stars: stars, image: imageName, description: description)
+        
+        record.setValuesForKeys(itemListing.toDictionary())
+        
+        // saving to database
+        self.database.save(record) { newRecord, error in
+            if let error = error {
+                print(error)
+            } else {
+                if let newRecord = newRecord {
+                    print("Saved")
+                }
+            }
+        }
+        
+    }
+    
+    
+    
     func populateItems() {
         var items: [ItemListing] = []
         let query = CKQuery(recordType: RecordType.establishment.rawValue, predicate: NSPredicate(value: true))
@@ -79,5 +103,9 @@ struct ItemViewModel {
     
     var image: UIImage {
         itemListing.image
+    }
+    
+    var description: String {
+        itemListing.description
     }
 }

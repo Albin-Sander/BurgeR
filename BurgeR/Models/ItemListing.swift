@@ -17,24 +17,30 @@ struct ItemListing {
     let author: String
     let stars: Int64
     let image: UIImage
+    let description: String
    
     
     
-    init(recordId: CKRecord.ID? = nil, name: String, author: String, stars: Int64, image: UIImage) {
+    init(recordId: CKRecord.ID? = nil, name: String, author: String, stars: Int64, image: UIImage, description: String) {
         self.recordId = recordId
         self.name = name
         self.author = author
         self.stars = stars
         self.image = image
+        self.description = description
+    }
+    
+    func toDictionary() -> [String: Any] {
+        return ["name": name, "stars": stars, "author": author, "describition": description]
     }
     
     static func fromRecord(_ record: CKRecord) -> ItemListing? {
-        guard let name = record.value(forKey: "name") as? String, let author = record.value(forKey: "author") as? String, let stars = record.value(forKey: "stars") as? Int64, let image = record.value(forKey: "image") as? CKAsset
+        guard let name = record.value(forKey: "name") as? String, let author = record.value(forKey: "author") as? String, let stars = record.value(forKey: "stars") as? Int64, let image = record.value(forKey: "image") as? CKAsset, let description = record.value(forKey: "description") as? String
         else {
             return nil
         }
         guard let data = try? Data(contentsOf: (image.fileURL!)) else { return nil }
         guard let hej = UIImage(data: data) else { return nil }
-        return ItemListing(recordId: record.recordID, name: name, author: author, stars: stars, image: hej)
+        return ItemListing(recordId: record.recordID, name: name, author: author, stars: stars, image: hej, description: description)
     }
 }

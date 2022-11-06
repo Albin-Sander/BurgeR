@@ -10,6 +10,8 @@ import CloudKit
 
 struct BurgerListView: View {
     @StateObject private var vm: ItemListViewModel
+    @State var showAddView = false
+    let container = CKContainer(identifier: "iCloud.com.sander.BurgeR")
     
     init(vm: ItemListViewModel) {
         _vm = StateObject(wrappedValue: vm)
@@ -17,9 +19,10 @@ struct BurgerListView: View {
     }
     var body: some View {
         NavigationView {
+            ZStack(alignment: .bottom) {
                 List {
                     ForEach(vm.items, id: \.recordId) { item in
-                        NavigationLink(destination: BurgerDetailView(name: item.name, author: item.author, image: item.image)) {
+                        NavigationLink(destination: BurgerDetailView(name: item.name, author: item.author, image: item.image, description: item.description)) {
                             HStack {
                                 Text(item.name)
                                 ForEach(1...Int(item.stars), id: \.self) {_ in
@@ -33,13 +36,36 @@ struct BurgerListView: View {
                         }
                     }
                 }
-                .refreshable {
-                    vm.populateItems()
+                HStack() {
+                    NavigationLink(destination: AddNewItemView(vm: ItemListViewModel(container: container)), isActive: $showAddView) { EmptyView() }
+                    Button {
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
+                        showAddView = true
+                    } label: {
+                        Image(systemName: "plus")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 15, height: 15)
+                            .padding(20)
+                    }
+                    .background(.purple)
+                    .foregroundColor(.white)
+                    .cornerRadius(.infinity)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                .environment(\.defaultMinListRowHeight, 50)
+                
+                
+            }
+            .refreshable {
+                vm.populateItems()
+            }
+            .environment(\.defaultMinListRowHeight, 50)
             .padding()
             .padding(.top, 5)
             .navigationTitle("BurgeR")
+            
             
         }
     }

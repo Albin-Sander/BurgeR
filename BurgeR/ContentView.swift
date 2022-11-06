@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             BurgerListView(vm: ItemListViewModel(container: container))
+          //  AddNewItemView(vm: ItemListViewModel(container: container))
         }
     }
 }
