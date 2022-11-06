@@ -16,12 +16,12 @@ struct ItemListing {
     let name: String
     let author: String
     let stars: Int64
-    let image: UIImage
+    let image: CKAsset
     let description: String
    
     
     
-    init(recordId: CKRecord.ID? = nil, name: String, author: String, stars: Int64, image: UIImage, description: String) {
+    init(recordId: CKRecord.ID? = nil, name: String, author: String, stars: Int64, image: CKAsset, description: String) {
         self.recordId = recordId
         self.name = name
         self.author = author
@@ -31,7 +31,7 @@ struct ItemListing {
     }
     
     func toDictionary() -> [String: Any] {
-        return ["name": name, "stars": stars, "author": author, "describition": description]
+        return ["name": name, "stars": stars, "author": author, "description": description, "image": image]
     }
     
     static func fromRecord(_ record: CKRecord) -> ItemListing? {
@@ -41,6 +41,6 @@ struct ItemListing {
         }
         guard let data = try? Data(contentsOf: (image.fileURL!)) else { return nil }
         guard let hej = UIImage(data: data) else { return nil }
-        return ItemListing(recordId: record.recordID, name: name, author: author, stars: stars, image: hej, description: description)
+        return ItemListing(recordId: record.recordID, name: name, author: author, stars: stars, image: image, description: description)
     }
 }

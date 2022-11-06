@@ -16,6 +16,7 @@
 		B143E7F729156A3E007D80BB /* BurgerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E7F629156A3E007D80BB /* BurgerDetailView.swift */; };
 		B143E7F929156AEB007D80BB /* BurgerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E7F829156AEB007D80BB /* BurgerListView.swift */; };
 		B143E7FB2917CBAF007D80BB /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E7FA2917CBAF007D80BB /* AddNewItemView.swift */; };
+		B143E7FD2917F05B007D80BB /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E7FC2917F05B007D80BB /* PhotoPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B143E7F629156A3E007D80BB /* BurgerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerDetailView.swift; sourceTree = "<group>"; };
 		B143E7F829156AEB007D80BB /* BurgerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerListView.swift; sourceTree = "<group>"; };
 		B143E7FA2917CBAF007D80BB /* AddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemView.swift; sourceTree = "<group>"; };
+		B143E7FC2917F05B007D80BB /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				B143E7F629156A3E007D80BB /* BurgerDetailView.swift */,
 				B143E7F829156AEB007D80BB /* BurgerListView.swift */,
 				B143E7FA2917CBAF007D80BB /* AddNewItemView.swift */,
+				B143E7FC2917F05B007D80BB /* PhotoPickerView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				B13DA5012911BF1100A24C0B /* ContentView.swift in Sources */,
 				B13DA5142911CB7F00A24C0B /* ItemListing.swift in Sources */,
 				B143E7F729156A3E007D80BB /* BurgerDetailView.swift in Sources */,
+				B143E7FD2917F05B007D80BB /* PhotoPickerView.swift in Sources */,
 				B143E7FB2917CBAF007D80BB /* AddNewItemView.swift in Sources */,
 				B143E7F929156AEB007D80BB /* BurgerListView.swift in Sources */,
 				B13DA5102911CA7D00A24C0B /* ItemListViewModel.swift in Sources */,

@@ -27,24 +27,37 @@ class ItemListViewModel: ObservableObject {
     }
     
     
-    func saveItem(name: String, stars: Int64, description: String, author: String) {
+    func saveItem(name: String, stars: Int64, description: String, author: String, image: Data) {
         
         let record = CKRecord(recordType: RecordType.establishment.rawValue)
-        let imageName = UIImage(named: "mcdonalds")!
-        let itemListing = ItemListing(name: name, author: author, stars: stars, image: imageName, description: description)
         
-        record.setValuesForKeys(itemListing.toDictionary())
+        guard let imageName = UIImage(data: image), let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent("hej.jpg"), let data = imageName.jpegData(compressionQuality: 1.0) else { return }
         
-        // saving to database
-        self.database.save(record) { newRecord, error in
-            if let error = error {
-                print(error)
-            } else {
-                if let newRecord = newRecord {
-                    print("Saved")
+        let asset: CKAsset
+        
+        do {
+            try data.write(to: url)
+            asset = CKAsset(fileURL: url)
+            
+            let itemListing = ItemListing(name: name, author: author, stars: stars, image: asset, description: description)
+            
+            record.setValuesForKeys(itemListing.toDictionary())
+            
+            // saving to database
+            self.database.save(record) { newRecord, error in
+                if let error = error {
+                    print(error)
+                } else {
+                    if let newRecord = newRecord {
+                        print("Saved")
+                    }
                 }
             }
+        } catch let error {
+            print(error)
         }
+        
+        
         
     }
     
@@ -77,7 +90,7 @@ class ItemListViewModel: ObservableObject {
             case .failure(let error):
                 print(error)
             }
-    
+            
         }
     }
 }
@@ -102,7 +115,10 @@ struct ItemViewModel {
     }
     
     var image: UIImage {
-        itemListing.image
+        
+        let data = NSData(contentsOf: itemListing.image.fileURL!)
+        return UIImage(data: data as! Data)!
+        
     }
     
     var description: String {
