@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B13DA4FB2911BF1100A24C0B /* BurgeR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgeR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13DA4FB2911BF1100A24C0B /* Wise Burgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wise Burgers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13DA4FE2911BF1100A24C0B /* BurgeRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgeRApp.swift; sourceTree = "<group>"; };
 		B13DA5002911BF1100A24C0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B13DA5022911BF1200A24C0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		B13DA4FC2911BF1100A24C0B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B13DA4FB2911BF1100A24C0B /* BurgeR.app */,
+				B13DA4FB2911BF1100A24C0B /* Wise Burgers.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,9 +114,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B13DA4FA2911BF1100A24C0B /* BurgeR */ = {
+		B13DA4FA2911BF1100A24C0B /* Wise Burgers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B13DA5092911BF1200A24C0B /* Build configuration list for PBXNativeTarget "BurgeR" */;
+			buildConfigurationList = B13DA5092911BF1200A24C0B /* Build configuration list for PBXNativeTarget "Wise Burgers" */;
 			buildPhases = (
 				B13DA4F72911BF1100A24C0B /* Sources */,
 				B13DA4F82911BF1100A24C0B /* Frameworks */,
@@ -126,9 +126,9 @@
 			);
 			dependencies = (
 			);
-			name = BurgeR;
+			name = "Wise Burgers";
 			productName = BurgeR;
-			productReference = B13DA4FB2911BF1100A24C0B /* BurgeR.app */;
+			productReference = B13DA4FB2911BF1100A24C0B /* Wise Burgers.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B13DA4F62911BF1100A24C0B /* Build configuration list for PBXProject "BurgeR" */;
+			buildConfigurationList = B13DA4F62911BF1100A24C0B /* Build configuration list for PBXProject "Wise Burgers" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,7 +159,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B13DA4FA2911BF1100A24C0B /* BurgeR */,
+				B13DA4FA2911BF1100A24C0B /* Wise Burgers */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sander.BurgeR;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sander.wise-burgers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -361,7 +361,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sander.BurgeR;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sander.wise-burgers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -372,7 +372,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B13DA4F62911BF1100A24C0B /* Build configuration list for PBXProject "BurgeR" */ = {
+		B13DA4F62911BF1100A24C0B /* Build configuration list for PBXProject "Wise Burgers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B13DA5072911BF1200A24C0B /* Debug */,
@@ -381,7 +381,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B13DA5092911BF1200A24C0B /* Build configuration list for PBXNativeTarget "BurgeR" */ = {
+		B13DA5092911BF1200A24C0B /* Build configuration list for PBXNativeTarget "Wise Burgers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B13DA50A2911BF1200A24C0B /* Debug */,
