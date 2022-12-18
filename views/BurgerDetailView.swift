@@ -27,7 +27,7 @@ struct BurgerDetailView: View {
             
             Spacer()
              
-            Text("Written by: \(author)")
+            Text("Author: \(author)")
             
             Spacer()
         }

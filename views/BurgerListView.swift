@@ -36,6 +36,7 @@ struct BurgerListView: View {
                         }
                     }
                 }
+                .scrollContentBackground(.hidden)
                 HStack() {
                     NavigationLink(destination: AddNewItemView(vm: ItemListViewModel(container: container)), isActive: $showAddView) { EmptyView() }
                     Button {
