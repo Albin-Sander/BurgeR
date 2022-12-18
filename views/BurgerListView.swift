@@ -65,7 +65,7 @@ struct BurgerListView: View {
             .environment(\.defaultMinListRowHeight, 50)
             .padding()
             .padding(.top, 5)
-            .navigationTitle("BurgeR")
+            .navigationTitle("Wise Burgers")
             
             
         }

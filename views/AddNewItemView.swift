@@ -30,8 +30,6 @@ struct AddNewItemView: View {
             Form {
                 
                 
-                
-                
                 Section(header:
                             VStack(alignment: .leading) {
                     Text("Name of resturant")
